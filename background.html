@@ -1,0 +1,11 @@
+<script type="text/javascript">
+
+chrome.tabs.getAllInWindow(null, function(tabs){
+	tabs.forEach(function(tab){
+		chrome.tabs.executeScript(null, { file: "quickSubmit.js" }, function() {
+    		console.log("QuickSubmit loaded, listening for submit shortcut (alt+shift+s)");
+		});
+	}
+)});
+
+</script>
